@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Charlotte">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3CradialGradient id='g1' cx='50%25' cy='50%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffd966'/%3E%3Cstop offset='100%25' style='stop-color:%23d9a847'/%3E%3C/radialGradient%3E%3CradialGradient id='g2' cx='50%25' cy='50%25'%3E%3Cstop offset='0%25' style='stop-color:%23f4e6a0'/%3E%3Cstop offset='100%25' style='stop-color:%23d4c47a'/%3E%3C/radialGradient%3E%3CradialGradient id='g3' cx='50%25' cy='50%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffc233'/%3E%3Cstop offset='100%25' style='stop-color:%23e6a820'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='100' cy='110' rx='75' ry='90' fill='url(%23g1)' transform='rotate(-15 100 110)'/%3E%3Cellipse cx='100' cy='110' rx='55' ry='75' fill='url(%23g2)' transform='rotate(-15 100 110)'/%3E%3Ccircle cx='100' cy='110' r='25' fill='url(%23g3)'/%3E%3Cellipse cx='95' cy='100' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='115' cy='105' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='85' cy='125' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='105' cy='135' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='125' cy='125' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='100' cy='150' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='118' cy='145' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='82' cy='145' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='108' cy='165' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='92' cy='165' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='105' cy='100' rx='3' ry='4' fill='white' opacity='0.4'/%3E%3Cpath d='M 130 35 Q 140 25 150 30 Q 155 35 152 45 Q 148 55 140 58 Q 135 60 130 55 Z' fill='%23c4954d'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3CradialGradient id='g1' cx='50%25' cy='50%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffd966'/%3E%3Cstop offset='100%25' style='stop-color:%23d9a847'/%3E%3C/radialGradient%3E%3CradialGradient id='g2' cx='50%25' cy='50%25'%3E%3Cstop offset='0%25' style='stop-color:%23f4e6a0'/%3E%3Cstop offset='100%25' style='stop-color:%23d4c47a'/%3E%3C/radialGradient%3E%3CradialGradient id='g3' cx='50%25' cy='50%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffc233'/%3E%3Cstop offset='100%25' style='stop-color:%23e6a820'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='100' cy='110' rx='75' ry='90' fill='url(%23g1)' transform='rotate(-15 100 110)'/%3E%3Cellipse cx='100' cy='110' rx='55' ry='75' fill='url(%23g2)' transform='rotate(-15 100 110)'/%3E%3Ccircle cx='100' cy='110' r='25' fill='url(%23g3)'/%3E%3Cellipse cx='95' cy='100' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='115' cy='105' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='85' cy='125' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='105' cy='135' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='125' cy='125' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='100' cy='150' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='118' cy='145' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='82' cy='145' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='108' cy='165' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='92' cy='165' rx='8' ry='10' fill='%23806040' opacity='0.6'/%3E%3Cellipse cx='105' cy='100' rx='3' ry='4' fill='white' opacity='0.4'/%3E%3Cpath d='M 130 35 Q 140 25 150 30 Q 155 35 152 45 Q 148 55 140 58 Q 135 60 130 55 Z' fill='%23c4954d'/%3E%3C/svg%3E">
+    <title>Charlotte's Messages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #faf0e0;
+            background-image: linear-gradient(135deg, #faf0e0 0%, #f2e6d1 50%, #ebe0cc 100%);
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            padding: 20px;
+        }
+
+        .welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            height: -webkit-fill-available;
+            background: #faf0e0;
+            background-image: linear-gradient(135deg, #faf0e0 0%, #f2e6d1 50%, #ebe0cc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1.5s ease;
+        }
+
+        .welcome-screen.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .welcome-text {
+            font-size: 32px;
+            font-weight: 300;
+            font-style: italic;
+            color: #997f66;
+            text-align: center;
+            padding: 0 40px;
+            font-family: Georgia, serif;
+        }
+
+        .cake-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: swing 3s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(-15deg); }
+            50% { transform: rotate(15deg); }
+        }
+
+        .constellation {
+            width: 200px;
+            height: 250px;
+            position: relative;
+            margin: 40px 0;
+        }
+
+        .star {
+            position: absolute;
+            background: #b39980;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(179, 153, 128, 0.6);
+        }
+
+        .fortune-card {
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 28px;
+            padding: 35px 30px;
+            margin: 40px 0;
+            box-shadow: 0 12px 25px rgba(179, 153, 128, 0.15);
+            border: 1.5px solid rgba(204, 179, 153, 0.4);
+            width: 100%;
+            max-width: 420px;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .fortune-card.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .fortune-title {
+            font-size: 22px;
+            font-weight: 300;
+            font-style: italic;
+            color: #997f66;
+            text-align: center;
+            margin-bottom: 15px;
+            font-family: Georgia, serif;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 15px 0;
+            color: rgba(191, 166, 140, 0.6);
+        }
+
+        .divider-line {
+            width: 35px;
+            height: 1px;
+            background: rgba(191, 166, 140, 0.6);
+        }
+
+        .sparkle {
+            font-size: 11px;
+        }
+
+        .fortune-text {
+            font-size: 18px;
+            color: #806659;
+            text-align: center;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .button {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1.5px solid rgba(191, 166, 140, 0.4);
+            border-radius: 50px;
+            padding: 16px 40px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #806659;
+            cursor: pointer;
+            box-shadow: 0 8px 12px rgba(179, 153, 128, 0.2);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            text-align: center;
+            min-width: 240px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button:active {
+            transform: scale(0.96);
+            box-shadow: 0 4px 8px rgba(179, 153, 128, 0.1);
+        }
+
+        .all-messages-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 30px;
+            padding: 50px 40px;
+            margin: 40px 0;
+            box-shadow: 0 12px 30px rgba(179, 153, 128, 0.2);
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+        }
+
+        .heart-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .final-title {
+            font-size: 24px;
+            font-weight: 300;
+            font-style: italic;
+            color: #997f66;
+            margin-bottom: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .final-message {
+            font-size: 20px;
+            color: #806659;
+            line-height: 1.8;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-screen show" id="welcomeScreen">
+        <div class="welcome-text">Hello dear Charlotte!</div>
+    </div>
+
+    <div class="container" id="mainContainer">
+        <div class="cake-icon">🎂</div>
+
+        <div id="constellationView">
+            <div class="constellation">
+                <div class="star" style="width: 8px; height: 8px; left: 30px; top: 40px;"></div>
+                <div class="star" style="width: 6px; height: 6px; left: 170px; top: 50px;"></div>
+                <div class="star" style="width: 7px; height: 7px; left: 70px; top: 110px;"></div>
+                <div class="star" style="width: 7px; height: 7px; left: 100px; top: 115px;"></div>
+                <div class="star" style="width: 7px; height: 7px; left: 130px; top: 120px;"></div>
+                <div class="star" style="width: 8px; height: 8px; left: 140px; top: 210px;"></div>
+                <div class="star" style="width: 6px; height: 6px; left: 60px; top: 200px;"></div>
+            </div>
+        </div>
+
+        <div id="fortuneCard" class="fortune-card hidden">
+            <div class="fortune-title" id="fortuneTitle"></div>
+            <div class="divider">
+                <span class="sparkle">✨</span>
+                <div class="divider-line"></div>
+                <span class="sparkle">✨</span>
+            </div>
+            <div class="fortune-text" id="fortuneText"></div>
+        </div>
+
+        <div id="allMessagesView" class="all-messages-card hidden">
+            <div class="heart-icon">❤️</div>
+            <div class="final-title">All messages have been read</div>
+            <div class="final-message">
+                Thank you for being in my life, Charlotte.<br>
+                You are the best thing that ever happened to me.<br>
+                I love you endlessly.
+            </div>
+        </div>
+
+        <button class="button" id="mainButton" onclick="handleButtonClick()">
+            To the closest person
+        </button>
+    </div>
+
+    <script>
+        const titles = [
+            "My dear Charly", "Little monkey", "My lovely Charlotte", "Moya Sharlotka",
+            "The youngest of the Maxwells", "Miss Congeniality", "Seriously?!", "My sunshine"
+        ];
+
+        const fortunes = [
+            "Remember how people say you're the sunshine? They're not wrong. I also associate you with light in my life. But the sun doesn't shine without breaks. It sets, it rests, and that makes the morning even more beautiful.",
+            "Your ability to build bridges between people isn't just a skill. It's a rare gift to see the person behind the masks, and people feel this on an instinctive level.",
+            "You know that the most interesting people never know who they want to be? Because they can be anyone. I believe in you endlessly.",
+            "Today, look in the mirror not as a critic, but as a friend. See those very eyes that light up when you laugh or meet friends. Those very hair that flows when you dance salsa.",
+            "I know things aren't easy for you right now and you don't understand your path. An identity crisis isn't about being lost. It's about outgrowing your old version and not yet having assembled the new one or gotten used to the new one. Everything in its own time. Hugging you tight.",
+            "You always compare yourself to your younger version and get upset that you're not as active. But your version of 'passive' is someone else's version of 'incredibly active.' You're finally finding balance. Accept it.",
+            "Every time you doubt your beauty, remember: people on the street aren't collectively mistaken. I'm talking about all those who wanted to be with you at one moment or another in life. I'm talking about those men and women who look at you when we walk together. They see what you don't yet allow yourself to see.",
+            "The fact that you don't betray your principles even in difficult times speaks to your strength. In a world where everyone compromises, this makes you rare. I really respect this about you, Charly.",
+            "Your inability to say 'no' is the flip side of a huge heart. Work on boundaries, but don't be ashamed of your responsiveness. You're a wonderful person, despite not understanding my cool jokes.",
+            "When you're offered jobs from completely different fields, it's not a coincidence, Charly. It's because people see the real you and believe in you. They believe in your value. Believe in your value too.",
+            "Your voice, which you hide in your singing account, deserves to be heard. But even if you're not ready, know this: what you create is already beautiful. I love your songs very much and my grandmother also considered you a beautiful songbird.",
+            "There's a magnetism in you that can't be faked. People feel it. You're the kind of person people want to be better around. I distinctly remember this in myself, almost from our first calls. Thank you for making us better.",
+            "To me, you're like a sparkling, lively, pure mountain stream. People are drawn to this energy, I see it constantly. Maybe because your energy is rare in a world of stagnant water.",
+            "You have a magnificent figure, Charly. I adore your eyes and your natural lips, your childlike cheeks. Your wonderful hair. But you know what makes you truly beautiful? The way you light up when you help someone, tell me about a new project, passion, new plans and meetings.",
+            "The family's financial problems are hard, but they're temporary. The main thing is that you're together. Don't quarrel and stay close. Surround Alex with your warmth and love. Everything will be okay.",
+            "You're real. Genuine. People feel this and I also adore this about you.",
+            "I know that sometimes you get upset that you weren't productive. But in your case, it's not bad. Being a living person is more important than being an achievement machine. You'll succeed at everything. I know you well.",
+            "Your openness to new experiences, Sharlotka, makes your life an adventure. Most people get stuck in routine, but you're still capable of being amazed. This is valuable. Cherish it.",
+            "You told me you don't know how to do anything. Every time you doubt your abilities, remember: people choose you, Charly. Again and again. Both for different work projects and just in terms of your social circle. This is not a coincidence.",
+            "Your love, Charly, is the most wonderful thing that has ever happened to me in life. I never thought I deserved it.",
+            "The fact that you remember your young hyperactive version of Sharlotka is normal. But don't make her a prison for your current self. You have the right to change.",
+            "Your charity work has changed destinies. There are people walking the earth who are alive because of you. This is not an exaggeration, my friend! You're a person with a huge heart. Probably even like Duke, Eder's dog.",
+            "Salsa, singing, drawing, Shaolin (lol), music. What's tomorrow, Sharlotka? Honestly, I adore you for this, little monkey.",
+            "You know what can sometimes help (not just you, but me too) - ask yourself not 'what haven't I achieved yet,' but 'what have I been through and survived.' The second list will impress you.",
+            "Your cheerfulness after everything you've been through. This is a strength many only dream of having. I know it's not always easy for you, but for me you're an example of resilience, mercy, and ease in letting go of situations and focusing on the good.",
+            "Your presence makes everything around better. And it's been that way since our first call. Just don't be late, Charly.",
+            "We're all crawling through our crises. That's the age. A crisis is when the old life no longer fits, but the new one hasn't been born yet. But I believe this is just a cocoon state. Soon there will be wings.",
+            "Your ability to not hold grudges is something I'd like to learn from you, Sharlotka. It's liberation. Most people live in a prison of old wounds. I have a lot of that.",
+            "Helping refugees, evacuations, documentaries - this isn't just work. It's a mission. And you have it, even if it's unclear right now how exactly to continue.",
+            "Next to you, I feel my Russian programming. Because you're a master at the art of not getting stuck in negative scenarios. Use this.",
+            "I like that you're so multifaceted. For me, this means you don't fit in one box. And that's beautiful. Boxes are for packages, not for people. I want you to always surprise me with new passions and ideas.",
+            "I love spending time with you. Your spontaneity makes communicating with you like a breath of fresh air. Don't lose this quality for the sake of 'seriousness.' I love you, little monkey.",
+            "Every person you pulled out of a danger zone is alive. Breathing. Loving. Thanks to you. This is not abstract.",
+            "When friends get married and have children, that's their path. Your path is to be light and inspiration for hundreds of people. No less valuable. Everything in its own time.",
+            "People see your magical energy because it's real. You radiate something that can't be faked.",
+            "Inner insecurity and outer reality are parallel universes. Believe the outer one: you're beautiful.",
+            "When you paint, write music, dance, give yourself to a new passion, these aren't 'trials.' This is self-exploration. And that's valuable in itself. I really like this about you.",
+            "The problems your family has faced are huge. But your ability to preserve yourselves in this storm is priceless. You're a wonderful family. May this time make you even more united, even friendlier and softer with each other.",
+            "We often bring up this topic with you. I want to note that you're not lost in life. You're just at a point where the old map no longer works, and you're still drawing the new one.",
+            "Your ability to throw yourself into adventures and get passionate is undoubtedly a sign of youthful spirit.",
+            "You're a bright person. People feel this on an intuitive level. It's not something that can be faked.",
+            "Your friendship is a treasure. Next to you, I feel more alive than anyone alive.",
+            "You're also the sun because you give energy without taking it. This is very rare.",
+            "Your pure love is what others search for their whole life. I was gifted with your love, I was blessed to know this feeling with you and I will never forget it.",
+            "A thought came to me that the joy with which you study languages is a manifestation of the fact that you're always open to new ways of understanding the world. You're wonderful.",
+            "Today just breathe. Your value doesn't depend on productivity. You're valuable because you exist. And I love you for who you are. Without all your achievements and victories.",
+            "I want to remind you. I told you on your birthday that I wish you an amazing love affair with Charlotte Maxwell. To firmly and forever fall in love with that wonderful person you are and who will be with you until the end of your days. This is the real happiness I wish for you to know.",
+            "I see your beauty, that beauty which you don't yet allow yourself to see.",
+            "Your cheerfulness and positivity have always amazed me. It doesn't always work out for me. This is your choice to see light even in darkness. And this is real courage. Don't forget this in difficult moments. You're strong.",
+            "Your identity crisis isn't a dead end. It's a crossroads. And you have the right to stand on it until you understand where to go. Explore, Sharlotka. The world is an amazing place, don't look at others.",
+            "I want to remind you that everyone has their own path. Don't compare yourself to anyone. For me, you're a magical person and your path is unique. Remember how you once gave me a star for my birthday? For me, you're also a star. That star that's brighter than the rest and has helped me not lose hope so many times.",
+            "The world is better with you in it, no matter what.",
+            "I'm amazed at how many cultural references are unfamiliar to you. But your version of reality, where half the memes and movies don't exist, is probably much more interesting. I envy you, monkey!",
+            "Yes, you have 90 plastic bottles at home. But you know what I realized? Each one is evidence that you care for yourself. That's good. The dolphins will survive.",
+            "Your smoothies look like witch's potions, that's a fact. But maybe that's the secret of your magical energy?",
+            "Your collection of alphabet letters (diagnoses) is impressive. But you know what? You're much more and more complex than any abbreviation. Much more than any HDMI you're trying to fit Charlotte into.",
+            "You protect the environment and simultaneously own a mini plastic factory in the form of small cosmetic bottles. This is called balance, baby. I respect you for this.",
+            "You and I are very different. I understand my jokes, and you don't. I can do a backflip, and you can't. I know the truth about dolphins, and you don't. But I still love you very much!",
+            "When you blush at my inappropriate jokes in front of friends, but laugh - that's the best version of you. Genuine and alive.",
+            "Your attentiveness to what people say is your real talent. That's why your gifts always hit the mark. Even when asked not to give gifts.",
+            "Yes, dolphins are damn dangerous. But your big heart still wants to believe in the good. And that's beautiful. This is the power of your optimism. Don't lose it.",
+            "Every new package from China at the guard's reception is a little adventure. Don't blame yourself for loving anticipation. You're creating jobs for all those who create fuel for cargo ships from China, for sorting center workers and many others. Your virtue knows no bounds!",
+            "Your collection of alphabet letter diagnoses is an attempt to understand yourself. I respect this. At least someone should understand you)",
+            "I know you can't read maps, but you can read people and books. And that's much more valuable.",
+            "Your wardrobe is a museum of impulsive decisions. But each one was about joy in the moment. And it all suits you very well. I'll never forget how everyone in Gorinich looked at you. Because you were the most beautiful, the most alive and real.",
+            "Just wanted to remind you. 90 cosmetic bottles... 90... Holy shit!",
+            "Your belief in the healing power of dolphins is touching. It doesn't matter that the truth is more complex. Stay that way.",
+            "Your love for smoothies and strange drinks is your way of feeling control and taking care of yourself. Brew your potions, little witch.",
+            "Haven't seen half the classic movies? Excellent. More discoveries ahead.",
+            "I'm writing you this note and remembering how yesterday we walked through nighttime Mexico, drank tea in a cafe and talked about life, laughed. I'm never bored with you. And you've given me many moments that will forever remain in me as pleasant warm happiness.",
+            "Thank you for everything you've done for me. You changed me, you changed my life. I don't know on which day you'll read this and how you'll be feeling, but I want you to know that you're wonderful and we all love and value you very much. Smile if you're reading this. Your smile can dispel any clouds.",
+            "You know why chickens are so funny? Becauuuuuse!"
+        ];
+
+        let usedIndices = [];
+        let hasShownTodayFortune = false;
+        let showingFortune = false;
+        let allMessagesShown = false;
+
+        function getTodayString() {
+            const d = new Date();
+            return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+        }
+
+        function loadData() {
+            const today = getTodayString();
+            const savedDate = localStorage.getItem('lastShownDate');
+            
+            if (savedDate === today) {
+                hasShownTodayFortune = true;
+                const savedFortune = localStorage.getItem('todayFortune');
+                const savedTitle = localStorage.getItem('todayTitle');
+                if (savedFortune && savedTitle) {
+                    document.getElementById('fortuneText').textContent = savedFortune;
+                    document.getElementById('fortuneTitle').textContent = savedTitle;
+                }
+            }
+
+            const saved = localStorage.getItem('usedIndices');
+            if (saved) {
+                try {
+                    usedIndices = JSON.parse(saved);
+                    if (usedIndices.length >= fortunes.length) {
+                        allMessagesShown = true;
+                    }
+                } catch(e) {
+                    usedIndices = [];
+                }
+            }
+        }
+
+        function generateFortune() {
+            if (hasShownTodayFortune) {
+                showFortune();
+                return;
+            }
+
+            if (usedIndices.length >= fortunes.length) {
+                allMessagesShown = true;
+                showAllMessagesView();
+                return;
+            }
+
+            const available = [];
+            for (let i = 0; i < fortunes.length; i++) {
+                if (usedIndices.indexOf(i) === -1) {
+                    available.push(i);
+                }
+            }
+
+            const index = available[Math.floor(Math.random() * available.length)];
+            usedIndices.push(index);
+            localStorage.setItem('usedIndices', JSON.stringify(usedIndices));
+
+            const fortune = fortunes[index];
+            const title = titles[Math.floor(Math.random() * titles.length)];
+
+            const today = getTodayString();
+            localStorage.setItem('lastShownDate', today);
+            localStorage.setItem('todayFortune', fortune);
+            localStorage.setItem('todayTitle', title);
+
+            hasShownTodayFortune = true;
+            document.getElementById('fortuneText').textContent = fortune;
+            document.getElementById('fortuneTitle').textContent = title;
+
+            showFortune();
+        }
+
+        function showFortune() {
+            showingFortune = true;
+            document.getElementById('constellationView').classList.add('hidden');
+            document.getElementById('fortuneCard').classList.remove('hidden');
+            setTimeout(function() {
+                document.getElementById('fortuneCard').classList.add('show');
+            }, 50);
+            document.getElementById('mainButton').textContent = "Remember that you are wonderful!";
+        }
+
+        function returnToStart() {
+            showingFortune = false;
+            document.getElementById('fortuneCard').classList.remove('show');
+            setTimeout(function() {
+                document.getElementById('fortuneCard').classList.add('hidden');
+                document.getElementById('constellationView').classList.remove('hidden');
+            }, 600);
+            document.getElementById('mainButton').textContent = "To the closest person";
+        }
+
+        function showAllMessagesView() {
+            document.getElementById('constellationView').classList.add('hidden');
+            document.getElementById('fortuneCard').classList.add('hidden');
+            document.getElementById('allMessagesView').classList.remove('hidden');
+            document.getElementById('mainButton').textContent = "Thank you for being you ❤️";
+        }
+
+        function handleButtonClick() {
+            if (allMessagesShown) return;
+            
+            if (showingFortune) {
+                returnToStart();
+            } else {
+                generateFortune();
+            }
+        }
+
+        window.onload = function() {
+            // Generate app icon dynamically
+            var canvas = document.createElement('canvas');
+            canvas.width = 180;
+            canvas.height = 180;
+            var ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#faf0e0';
+            ctx.fillRect(0, 0, 180, 180);
+            
+            // Avocado outer layer (orange)
+            ctx.save();
+            ctx.translate(90, 95);
+            ctx.rotate(-0.3);
+            ctx.beginPath();
+            ctx.ellipse(0, 0, 55, 70, 0, 0, Math.PI * 2);
+            var grad1 = ctx.createRadialGradient(0, 0, 0, 0, 0, 70);
+            grad1.addColorStop(0, '#ffd966');
+            grad1.addColorStop(1, '#d9a847');
+            ctx.fillStyle = grad1;
+            ctx.fill();
+            ctx.restore();
+            
+            // Avocado middle layer (yellow-green)
+            ctx.save();
+            ctx.translate(90, 95);
+            ctx.rotate(-0.3);
+            ctx.beginPath();
+            ctx.ellipse(0, 0, 40, 55, 0, 0, Math.PI * 2);
+            var grad2 = ctx.createRadialGradient(0, 0, 0, 0, 0, 55);
+            grad2.addColorStop(0, '#f4e6a0');
+            grad2.addColorStop(1, '#d4c47a');
+            ctx.fillStyle = grad2;
+            ctx.fill();
+            ctx.restore();
+            
+            // Seed (center)
+            ctx.beginPath();
+            ctx.arc(90, 95, 18, 0, Math.PI * 2);
+            var grad3 = ctx.createRadialGradient(90, 95, 0, 90, 95, 18);
+            grad3.addColorStop(0, '#ffc233');
+            grad3.addColorStop(1, '#e6a820');
+            ctx.fillStyle = grad3;
+            ctx.fill();
+            
+            // Seed texture dots
+            ctx.fillStyle = 'rgba(128, 96, 64, 0.6)';
+            var dots = [
+                [80, 80], [100, 82], [75, 95], [90, 100], [105, 98],
+                [85, 110], [100, 112], [95, 85], [108, 90]
+            ];
+            for (var i = 0; i < dots.length; i++) {
+                ctx.beginPath();
+                ctx.ellipse(dots[i][0], dots[i][1], 4, 5, 0, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            // Highlight
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+            ctx.beginPath();
+            ctx.ellipse(95, 88, 3, 4, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Stem
+            ctx.fillStyle = '#c4954d';
+            ctx.beginPath();
+            ctx.moveTo(100, 35);
+            ctx.quadraticCurveTo(110, 25, 115, 28);
+            ctx.quadraticCurveTo(118, 32, 116, 38);
+            ctx.quadraticCurveTo(113, 44, 108, 46);
+            ctx.quadraticCurveTo(105, 47, 102, 44);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Set as favicon
+            try {
+                var iconURL = canvas.toDataURL('image/png');
+                
+                var link = document.querySelector("link[rel*='apple-touch-icon']");
+                if (!link) {
+                    link = document.createElement('link');
+                    link.rel = 'apple-touch-icon';
+                    document.head.appendChild(link);
+                }
+                link.href = iconURL;
+                
+                var link2 = document.querySelector("link[rel*='icon']");
+                if (!link2) {
+                    link2 = document.createElement('link');
+                    link2.rel = 'icon';
+                    document.head.appendChild(link2);
+                }
+                link2.href = iconURL;
+            } catch(e) {
+                console.log('Icon generation failed:', e);
+            }
+            
+            loadData();
+            
+            setTimeout(function() {
+                document.getElementById('welcomeScreen').classList.remove('show');
+            }, 2500);
+
+            if (allMessagesShown) {
+                setTimeout(function() {
+                    showAllMessagesView();
+                }, 4000);
+            }
+        };
+    </script>
+</body>
+</html>
